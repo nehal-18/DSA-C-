@@ -1,0 +1,45 @@
+//program for swapping elements in array,here we are defining array in heap  
+#include <stdlib.h>
+#include <iostream>
+#define size_arr 5 //you can define your own size or can take from user
+using namespace std ;
+
+void swap(int *pointer,int start,int end){
+   while(start<end){
+      int temp=pointer[start];
+      pointer[start]=pointer[end];
+      pointer[end]=temp;
+      start++;
+      end--;
+   }
+}
+
+int main()
+{
+   ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);   //you need not worry about this ,it just used for fast i/o in cp
+   int *pointer;
+   pointer=(int*)malloc(size_arr*sizeof(int));
+   for(int i=0;i<size_arr;i++){
+      cin>>pointer[i];
+   }
+   swap(pointer,0,size_arr-1);
+   for(int i=0;i<size_arr;i++){
+      cout<<pointer[i];
+   }
+   free(pointer);
+   return 0;
+}
+/*
+Input:
+12
+13
+14
+15
+16
+Output:
+16
+15
+14
+13
+12
+*/
