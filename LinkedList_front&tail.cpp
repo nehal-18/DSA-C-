@@ -32,14 +32,17 @@ void Inserttail(LinkedList* &tail,int d){
 
 int main() {
  
-	LinkedList*head=new LinkedList(10);
-	LinkedList*tail=head;
+   LinkedList*head=new LinkedList(10);
+   LinkedList*tail=head;
 	
    Insertfront(head,20);
    Inserttail(tail,30);
    Inserttail(tail,40);
    Insertfront(head,5);
-	PrintList(head);
+	
+   PrintList(head);
 	
 	return 0;
 }
+
+//Output:5 20 10 30 40 
