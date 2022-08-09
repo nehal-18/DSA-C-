@@ -32,6 +32,6 @@ int main() {
 	
 	//printing values
 	PrintList(head);
-	
+	//Output:10 20 30
 	return 0;
 }
